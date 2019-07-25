@@ -2,6 +2,7 @@ node-postgres-named-function-arguments
 ===================
 
 [![Build Status](https://travis-ci.org/snorkypie/node-postgres-named-function-arguments.svg?branch=master)](https://travis-ci.org/snorkypie/node-postgres-named-function-arguments)
+[![npm version](https://badge.fury.io/js/node-postgres-named-function-arguments.svg)](https://badge.fury.io/js/node-postgres-named-function-arguments)
 
 Named function arguments for node-postgres
 
