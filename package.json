@@ -1,0 +1,30 @@
+{
+  "name": "node-postgres-named-function-arguments",
+  "version": "1.0.0",
+  "description": "Named function parameters for node-postgres",
+  "keywords": [
+    "database",
+    "postgres",
+    "postgresql",
+    "pg",
+    "plpgsql"
+  ],
+  "main": "./main.js",
+  "types": "./main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snorkypie/node-postgres-named-function-arguments.git"
+  },
+  "homepage": "https://github.com/snorkypie/node-postgres-named-function-arguments#readme",
+  "bugs": "https://github.com/snorkypie/node-postgres-named-function-arguments/issues",
+  "author": "Steeve Lennmark <steevel@handeldsbanken.se>",
+  "license": "MIT",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
+  }
+}
