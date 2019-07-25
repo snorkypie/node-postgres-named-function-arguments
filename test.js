@@ -11,7 +11,7 @@ describe(name, () => {
     ]);
   });
 
-  it('works with one argument', function () {
+  it('works with one argument', () => {
     const result = nfa('foo', { a: 'a' });
     expect(result).to.deep.equal([
       'select * from foo(a := $1)',
@@ -19,7 +19,7 @@ describe(name, () => {
     ]);
   });
 
-  it('works with two arguments', function () {
+  it('works with two arguments', () => {
     const result = nfa('foo', { a: 'a', b: 'b' });
     expect(result).to.deep.equal([
       'select * from foo(a := $1, b := $2)',
@@ -27,7 +27,7 @@ describe(name, () => {
     ]);
   });
 
-  it('deduplicates its arguments', function () {
+  it('deduplicates its arguments', () => {
     const result = nfa('foo', { a: 'a', b: 'a' });
     expect(result).to.deep.equal([
       'select * from foo(a := $1, b := $1)',
@@ -35,31 +35,31 @@ describe(name, () => {
     ]);
   });
 
-  it('works with `new Object`', function () {
+  it('works with `new Object`', () => {
     const args = new Object;
     args.a = 'a';
     args.b = 'b';
     const result = nfa('foo', args);
     expect(result).to.deep.equal([
       'select * from foo(a := $1, b := $2)',
-      ['a', 'b']
+      [ 'a', 'b' ]
     ]);
   });
 
-  it('fails on zero arguments', function () {
+  it('fails on zero arguments', () => {
     expect(nfa).to.throw();
   });
 
-  it('fails on non-string function name', function () {
+  it('fails on non-string function name', () => {
     expect(() => nfa(10)).to.throw();
     expect(() => nfa({ a: 'a' })).to.throw();
   });
 
-  it('fails on more than two arguments', function () {
+  it('fails on more than two arguments', () => {
     expect(() => nfa('foo', {}, {})).to.throw();
   });
 
-  it('fails on non-object as second argument', function () {
+  it('fails on non-object as second argument', () => {
     expect(() => nfa('foo', 'bar')).to.throw();
   });
 })
