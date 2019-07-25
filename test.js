@@ -62,8 +62,4 @@ describe(name, () => {
   it('fails on non-object as second argument', function () {
     expect(() => nfa('foo', 'bar')).to.throw();
   });
-
-  it('fails on non-string as function name', function () {
-    expect(() => nfa('foo', 'bar')).to.throw();
-  });
 })
